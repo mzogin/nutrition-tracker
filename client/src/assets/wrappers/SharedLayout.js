@@ -14,8 +14,13 @@ const Wrapper = styled.section`
     .dashboard {
       grid-template-columns: auto 1fr;
     }
-    #dashboard-page {
+    .dashboard-page {
       width: 90%;
+    }
+  }
+  @media (min-width: 992px) {
+    .dashboard .dashboard-page {
+      width: 90% !important;
     }
   }
 `
