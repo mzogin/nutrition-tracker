@@ -11,12 +11,12 @@ const Wrapper = styled.section`
     /* padding: 2rem 0; */
     padding: 1rem 0;
   }
-  @media screen and (min-width: 992px) {
+  @media (min-width: 992px) {
+    .dashboard-page {
+      width: 90%;
+    }
     .dashboard {
       grid-template-columns: auto 1fr;
-    }
-    .dashboard-page {
-      width: 90% !important;
     }
   }
 `
