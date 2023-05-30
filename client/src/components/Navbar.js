@@ -1,5 +1,3 @@
-// new nav
-
 import Wrapper from '../assets/wrappers/Navbar'
 // import { FaHome } from 'react-icons/fa'
 import { FaAlignLeft, FaUserCircle, FaCaretDown } from 'react-icons/fa'
