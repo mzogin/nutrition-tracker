@@ -14,7 +14,7 @@ const Wrapper = styled.section`
     .dashboard {
       grid-template-columns: auto 1fr;
     }
-    .dashboard > .dashboard-page {
+    #dashboard-page {
       width: 90%;
     }
   }

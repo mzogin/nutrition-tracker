@@ -12,7 +12,7 @@ export const SharedLayout = () => {
         {/* 2nd column */}
         <div>
           <Navbar />
-          <div className='dashboard-page'>
+          <div id='dashboard-page' className='dashboard-page'>
             <Outlet />
           </div>
         </div>
