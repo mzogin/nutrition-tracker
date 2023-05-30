@@ -77,12 +77,15 @@ export const Profile = () => {
             handleChange={(e) => setSex(e.target.value)}
             list={sexOptions}
           />
-        </div>
-        <div className='container'>
           <button className='btn btn-block' type='submit' disabled={isLoading}>
             {isLoading ? 'Please wait...' : 'save changes'}
           </button>
         </div>
+        {/* <div className='container'>
+          <button className='btn btn-block' type='submit' disabled={isLoading}>
+            {isLoading ? 'Please wait...' : 'save changes'}
+          </button>
+        </div> */}
       </form>
     </Wrapper>
   )

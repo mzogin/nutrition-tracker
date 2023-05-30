@@ -34,14 +34,14 @@ const Wrapper = styled.section`
     height: 35px;
     margin-top: 1rem;
   }
-
+  /* 
   .container {
     width: 100%;
     display: flex;
     justify-content: flex-end;
     margin-right: 0;
     padding-top: 1rem;
-  }
+  } */
   .btn-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -90,9 +90,9 @@ const Wrapper = styled.section`
     .btn-container {
       margin-top: 0;
     }
-    .container {
+    /* .container {
       width: 49%;
-    }
+    } */
   }
   @media (min-width: 1120px) {
     .form-center {
@@ -102,9 +102,9 @@ const Wrapper = styled.section`
     .form-center button {
       margin-top: 0;
     }
-    .container {
+    /* .container {
       width: 32.5%;
-    }
+    } */
   }
 `
 

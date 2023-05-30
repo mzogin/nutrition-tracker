@@ -60,7 +60,6 @@ const Wrapper = styled.nav`
     background: transparent;
     border-color: transparent;
     color: #222;
-    /* color: var(--primary-500); */
     letter-spacing: var(--letterSpacing);
     text-transform: capitalize;
     cursor: pointer;
