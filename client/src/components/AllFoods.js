@@ -10,6 +10,7 @@ export const AllFoods = () => {
     useAppContext()
   useEffect(() => {
     getFoods()
+    // eslint-disable-next-line
   }, [date])
   if (isLoading) {
     return <Loading />

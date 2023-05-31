@@ -91,78 +91,80 @@ export const SelectAmount = () => {
 
   return (
     <Wrapper>
-      <div ref={wrapperRef} className='select-amount'>
-        <div className='btn-container'>
-          <button type='button' className='close-btn' onClick={closeModal}>
-            <FaTimes />
-          </button>
-        </div>
-        {/* <form className='form' onSubmit={handleSubmit}> */}
-        {/* <form onSubmit={handleSubmit}> */}
-        <div className='food-description'>
-          <h4>{foodName}</h4>
-          {/* <h4>{name}</h4> */}
-        </div>
-        {showAlert && <Alert />}
-        <div className='food-details'>
-          <div className='serving'>
-            <label htmlFor='measure'>measure:</label>
-            <select
-              name='measure'
-              // name='serving'
-              id='measure'
-              // id='serving'
-              value={measure}
-              onChange={handleInput}
-            >
-              {measureOptions.map((measure) => {
-                return (
-                  <option key={measure.uri} value={measure.label}>
-                    {measure.label}
-                  </option>
-                )
-              })}
-            </select>
+      <div className='modal-background'>
+        <div ref={wrapperRef} className='select-amount'>
+          <div className='btn-container'>
+            <button type='button' className='close-btn' onClick={closeModal}>
+              <FaTimes />
+            </button>
           </div>
-          <div className='quantity'>
-            <label htmlFor='quantity'>quantity:</label>
-            <input
-              type='number'
-              id='quantity'
-              name='quantity'
-              min='1'
-              value={localQuantity}
-              // !value={quantity}
-              onChange={optimizedDebounce}
-              // onChange={handleInput}
-            />
+          {/* <form className='form' onSubmit={handleSubmit}> */}
+          {/* <form onSubmit={handleSubmit}> */}
+          <div className='food-description'>
+            <h4>{foodName}</h4>
+            {/* <h4>{name}</h4> */}
           </div>
-        </div>
-        <div className='btns-container'>
-          {isEditing && (
+          {showAlert && <Alert />}
+          <div className='food-details'>
+            <div className='serving'>
+              <label htmlFor='measure'>measure:</label>
+              <select
+                name='measure'
+                // name='serving'
+                id='measure'
+                // id='serving'
+                value={measure}
+                onChange={handleInput}
+              >
+                {measureOptions.map((measure) => {
+                  return (
+                    <option key={measure.uri} value={measure.label}>
+                      {measure.label}
+                    </option>
+                  )
+                })}
+              </select>
+            </div>
+            <div className='quantity'>
+              <label htmlFor='quantity'>quantity:</label>
+              <input
+                type='number'
+                id='quantity'
+                name='quantity'
+                min='1'
+                value={localQuantity}
+                // !value={quantity}
+                onChange={optimizedDebounce}
+                // onChange={handleInput}
+              />
+            </div>
+          </div>
+          <div className='btns-container'>
+            {isEditing && (
+              <button
+                className='btn delete-btn'
+                // onClick={addFood}
+                onClick={deleteFood}
+                // type='submit'
+                disabled={isGettingDetails || isAddingFood}
+              >
+                remove
+              </button>
+            )}
             <button
-              className='btn delete-btn'
-              // onClick={addFood}
-              onClick={deleteFood}
+              className='btn'
+              onClick={handleSubmit}
               // type='submit'
               disabled={isGettingDetails || isAddingFood}
             >
-              remove
+              {/* add */}
+              {isEditing ? 'save' : 'add'}
+              {/* {isAddingFood ? 'Please wait...' : 'add'} */}
             </button>
-          )}
-          <button
-            className='btn'
-            onClick={handleSubmit}
-            // type='submit'
-            disabled={isGettingDetails || isAddingFood}
-          >
-            {/* add */}
-            {isEditing ? 'save' : 'add'}
-            {/* {isAddingFood ? 'Please wait...' : 'add'} */}
-          </button>
+          </div>
+          {/* </form> */}
+          {!isLoading && <FoodDetails />}
         </div>
-        {/* </form> */}
-        {!isLoading && <FoodDetails />}
       </div>
       {/* {measure && <FoodDetails />} */}
     </Wrapper>

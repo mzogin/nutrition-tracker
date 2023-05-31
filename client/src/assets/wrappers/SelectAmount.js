@@ -5,51 +5,58 @@ const Wrapper = styled.div`
     color: white;
   }
   .select-amount {
-    position: fixed;
-    /* top: 2rem; */
-    z-index: 3;
+    /* position: fixed; */
+    /* z-index: 3;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 50%; */
+    /* transform: translate(-50%, -50%); */
     background: rgb(35, 35, 35);
-    color: #333;
     color: white;
     box-shadow: 2px 2px 5px #000;
     /* display: inline-block; */
     /* height: 20rem; */
     /* width: 20rem; */
-    width: 90vw;
+    /* width: 100vw;
     max-width: 600px;
-    min-height: 75vh;
+    min-height: 75vh; */
+
     /* max-width: 800px; */
-    padding: 0.25rem 1rem;
+    /* padding: 0.25rem 1rem; */
     padding: 2rem 3rem;
-    /* padding: 2rem; */
+    margin: 6% auto; /* 15% from the top and centered */
+    width: 100%; /* Could be more or less, depending on screen size */
+    max-width: 600px;
     /* text-transform: lowercase; */
     letter-spacing: var(--spacing);
   }
 
+  .modal-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto;
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.7); /* Black w/ opacity */
+  }
   .food-description {
     color: var(--primary-500);
     margin-bottom: 1.5rem;
   }
 
   .btn {
-    /* margin-top: 4rem; */
-    /* margin-top: 2rem; */
     padding: 0.4rem 1rem;
     text-transform: uppercase;
     letter-spacing: var(--spacing);
-    /* border: 1px solid white;
-    cursor: pointer;
-    transition: var(--transition); */
   }
 
   .food-details {
     /* width: 15rem; */
-    margin-left: auto;
+    /* margin-left: auto; */
     /* align-items: bottom; */
     display: flex;
+    flex-wrap: wrap;
     justify-content: right;
     /* margin-right: 2rem; */
     margin-right: 0rem;
@@ -139,9 +146,16 @@ const Wrapper = styled.div`
     padding: 0.05rem 0.5rem;
     padding-top: 0.2rem;
     cursor: pointer;
+    margin-bottom: 1rem;
   }
   .close-btn:hover {
     background: #dc0909;
+  }
+
+  @media (max-width: 390px) {
+    ul {
+      columns: 1 !important;
+    }
   }
 `
 export default Wrapper

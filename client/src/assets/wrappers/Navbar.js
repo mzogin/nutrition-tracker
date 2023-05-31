@@ -83,5 +83,11 @@ const Wrapper = styled.nav`
       font-style: italic;
     }
   }
+  @media (min-width: 992px) {
+    .logo-text {
+      display: block !important;
+      font-style: italic;
+    }
+  }
 `
 export default Wrapper
