@@ -73,7 +73,6 @@ const deleteFood = async (req, res) => {
 
 const showStats = async (req, res) => {
   const { date } = req.query
-
   const start = moment(date).startOf('day')
 
   let stats = await Food.aggregate([

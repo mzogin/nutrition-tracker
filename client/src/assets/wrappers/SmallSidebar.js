@@ -38,8 +38,11 @@ const Wrapper = styled.aside`
     background: transparent;
     border-color: transparent;
     font-size: 2rem;
-    color: var(--red-dark);
+    color: #f74141;
     cursor: pointer;
+  }
+  .close-btn:hover {
+    color: #dc0909;
   }
   .nav-links {
     padding-top: 2rem;

@@ -366,7 +366,9 @@ const AppProvider = ({ children }) => {
     const { date } = state
     // dispatch({ type: SHOW_STATS_BEGIN })
     try {
-      const { data } = await authFetch(`/foods/stats?date=${date}`)
+      const { data } = await authFetch(
+        `/foods/stats?date=${date.toISOString()}`
+      )
       const { defaultStats } = data
 
       dispatch({
