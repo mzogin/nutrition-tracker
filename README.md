@@ -1,5 +1,5 @@
-# nutrition-tracker (V-GAN Tracker)
-full site: https://nutrition-tracker.onrender.com/ (may take some time to load due to free plan restrictions)
+# nutrition-tracker (V-GAN Tracker) 🌿
+full site: https://nutrition-tracker.onrender.com/ (may take some time to load due to free hosting plan restrictions)
 ## overview
 Full Stack application created with React.js, Node.js/Express.js, and MongoDB.
 Allows users to add their foods and keep track of their daily progress.
