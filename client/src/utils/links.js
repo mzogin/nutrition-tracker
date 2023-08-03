@@ -13,7 +13,7 @@ const links = [
   },
   {
     id: 2,
-    text: 'all foods',
+    text: 'my foods',
     path: '/all-foods',
     icon: <MdQueryStats />,
   },
